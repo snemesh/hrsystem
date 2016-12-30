@@ -1,0 +1,16 @@
+ {!! Form::open(array('route' => array('uploading', $user->id ),'files'=>true)) !!}
+
+ {!! Form::open(array('route' => 'intervention.postresizeimage','files'=>true)) !!}
+
+
+
+ {!! Form::text('user_id', $user->id) !!}
+                                                     {!! Form::file('photo') !!}
+                                                     {!! Form::submit('Upload!') !!}
+                                                     {!! Form::token() . Form::close() !!}
+
+
+                                                          {!! Form::open(['route' => ['uploading','userid'=>$user->id],'files' => true]) !!}
+                                                                                                         {!! Form::file('photo') !!}
+                                                                                                         {!! Form::submit('Upload!') !!}
+                                                                                                         {!! Form::token() . Form::close() !!}
